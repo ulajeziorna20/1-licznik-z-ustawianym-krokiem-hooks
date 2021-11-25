@@ -12,7 +12,7 @@ const Counter = (props) => {
 
 
     const [counterValue, setCounterValue] = useState(props.initValue);
-    // const [stepValue, setStepValue] = useState(1);
+    const [stepValue, setStepValue] = useState(1);
 
 
 
@@ -34,7 +34,7 @@ const Counter = (props) => {
 
 
 
-    // buttonHandleChange = (action) => {
+    const buttonHandleChange = (action) => {
 
 
     //     let currentCounterValue = counterValue
@@ -58,7 +58,7 @@ const Counter = (props) => {
 
     //     setCounterValue(currentCounterValue)
 
-    // }
+    }
 
 
 
@@ -68,9 +68,9 @@ const Counter = (props) => {
         <div>
 
             <Display valueToDisplay={counterValue} />
-            {/* <ButtonsPannel buttonMethod={buttonHandleChange}
-                stateValueToDisplay={stepValue} />
-            <Step stepMethod={stepValueChange} /> */}
+            <ButtonsPannel buttonMethod={buttonHandleChange}
+            stateValueToDisplay={stepValue} />
+            {/* <Step stepMethod={stepValueChange} /> */}
 
         </div>
     )
