@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Component } from "react";
 import ButtonsPannel from "./ButtonsPannel";
 import './Counter.css';
@@ -6,20 +6,23 @@ import Display from "./Display";
 import Step from "./Step";
 
 
-class Counter extends Component {
-
-
-    constructor(props) {
-        super(props)
+const Counter = (props) => {
 
 
 
-        this.state = ({
 
-            counterValue: this.props.initValue,
-            stepValue: 1
-        })
-    }
+    const [counterValue, setCounterValue] = useState;(props.initValue);
+    const [stepValue, setStepValue] = useState(1);
+
+    // constructor(props) {
+    //     super(props)
+    //     this.state = ({
+
+    //         counterValue: this.props.initValue,
+    //         stepValue: 1
+    //     })
+    // }
+
 
 
 
