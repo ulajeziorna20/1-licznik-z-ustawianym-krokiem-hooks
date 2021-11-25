@@ -9,27 +9,20 @@ import Step from "./Step";
 const Counter = (props) => {
 
 
-
-
     const [counterValue, setCounterValue] = useState(props.initValue);
     const [stepValue, setStepValue] = useState(1);
 
 
 
 
-    // // useEffect((e) => {
 
-    // //     stepValue = +e.target.value
-    // // })
+    const stepValueChange = (e) => {
 
+        // console.log(e.target.value);
+        // console.log(+e.target.value);
 
-    // stepValueChange = (e) => {
-
-    //     // console.log(e.target.value);
-    //     // console.log(+e.target.value);
-
-    //         setStepValue(+e.target.value)
-    // }
+            setStepValue(+e.target.value)
+    }
 
 
 
@@ -70,14 +63,10 @@ const Counter = (props) => {
             <Display valueToDisplay={counterValue} />
             <ButtonsPannel buttonMethod={buttonHandleChange}
             stateValueToDisplay={stepValue} />
-            {/* <Step stepMethod={stepValueChange} /> */}
+            <Step stepMethod={stepValueChange} />
 
         </div>
     )
-
-
-
-
 }
 
 
