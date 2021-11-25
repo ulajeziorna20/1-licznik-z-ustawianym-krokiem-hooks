@@ -37,26 +37,26 @@ const Counter = (props) => {
     const buttonHandleChange = (action) => {
 
 
-    //     let currentCounterValue = counterValue
-    //     let currentStepValue = stepValue
-    //     console.log(currentStepValue);
+        let currentCounterValue = counterValue
+        let currentStepValue = stepValue
+        console.log(currentStepValue);
 
-    //     // let arr = currentCounterValue + currentStepValue
-    //     // console.log(arr);
+        // let arr = currentCounterValue + currentStepValue
+        // console.log(arr);
 
-    //     if (action === 'add-x') {
-    //         currentCounterValue += currentStepValue
+        if (action === 'add-x') {
+            currentCounterValue += currentStepValue
 
-    //     } else if (action === 'reset') {
-    //         currentCounterValue = 0
-    //     } else {
-    //         currentCounterValue = props.initValue
+        } else if (action === 'reset') {
+            currentCounterValue = 0
+        } else {
+            currentCounterValue = props.initValue
 
-    //     }
+        }
 
 
 
-    //     setCounterValue(currentCounterValue)
+        setCounterValue(currentCounterValue)
 
     }
 
