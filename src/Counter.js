@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Component } from "react";
 import ButtonsPannel from "./ButtonsPannel";
 import './Counter.css';
@@ -11,7 +11,7 @@ const Counter = (props) => {
 
 
 
-    const [counterValue, setCounterValue] = useState;(props.initValue);
+    const [counterValue, setCounterValue] = useState; (props.initValue);
     const [stepValue, setStepValue] = useState(1);
 
     // constructor(props) {
@@ -25,17 +25,19 @@ const Counter = (props) => {
 
 
 
+    useEffect((e) => {
 
-    stepValueChange = (e) => {
-
-        // console.log(e.target.value);
-        // console.log(+e.target.value);
+        stepValue = +e.target.value
+    })
 
 
-        this.setState({
-            stepValue: +e.target.value
-        })
-    }
+    // stepValueChange = (e) => {
+
+    //     // console.log(e.target.value);
+    //     // console.log(+e.target.value);
+
+    //         stepValue = +e.target.value
+    // }
 
 
 
@@ -58,12 +60,12 @@ const Counter = (props) => {
 
             if (action === 'add-x') {
                 currentCounterValue += currentStepValue
-    
+
             } else if (action === 'reset') {
                 currentCounterValue = 0
             } else {
                 currentCounterValue = prevProps.initValue
-    
+
             }
 
 
@@ -71,38 +73,30 @@ const Counter = (props) => {
             return ({
                 counterValue: currentCounterValue
             })
-    
+
         })
-          
-    }
-
-
-
-
-
-
-
-    render() {
-
-
-
-
-
-        
-        return (
-            <div>
-
-            <Display valueToDisplay={this.state.counterValue}/>
-            <ButtonsPannel buttonMethod={this.buttonHandleChange}
-            stateValueToDisplay={this.state.stepValue}/>
-            <Step stepMethod={this.stepValueChange}/>
-                
-            </div>
-        )
 
     }
 
-        
+
+
+
+
+
+
+
+    return (
+        <div>
+
+            <Display valueToDisplay={counterValue} />
+            <ButtonsPannel buttonMethod={buttonHandleChange}
+                stateValueToDisplay={stepValue} />
+            <Step stepMethod={stepValueChange} />
+
+        </div>
+    )
+
+
 
 
 }
