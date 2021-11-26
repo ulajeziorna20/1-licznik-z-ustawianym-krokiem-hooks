@@ -15,19 +15,19 @@ const ClockFunctional = (props) => {
 
     useEffect(() => {
 
-        // console.log(1);
+
         let timerID = setInterval(
             () => {tick()},
             1000
         )
 
-        // console.log(2);
+
         return(() => {
             clearInterval(timerID)
-            // console.log(3);
+      
         })
     }, [date])
-    // console.log(4);
+
 
 
 

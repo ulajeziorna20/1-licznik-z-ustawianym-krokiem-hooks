@@ -25,9 +25,6 @@ const Counter = (props) => {
 
     const stepValueChange = (e) => {
 
-        // console.log(e.target.value);
-        // console.log(+e.target.value);
-
         setStepValue(+e.target.value)
     }
 
@@ -39,8 +36,6 @@ const Counter = (props) => {
         let currentStepValue = stepValue
         console.log(currentStepValue);
 
-        // let arr = currentCounterValue + currentStepValue
-        // console.log(arr);
 
         if (action === 'add-x') {
             currentCounterValue += currentStepValue
