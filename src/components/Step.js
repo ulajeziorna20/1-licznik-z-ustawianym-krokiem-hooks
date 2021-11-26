@@ -1,10 +1,9 @@
 import React from "react";
-import './Step.css'
+import './css/Step.css'
 
 
 
 function Step(props) {
-
 
     return (
         <div>

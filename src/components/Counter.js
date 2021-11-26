@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Component } from "react";
 import ButtonsPannel from "./ButtonsPannel";
-import './Counter.css';
+import './css/Counter.css';
 import Display from "./Display";
 import Step from "./Step";
 
@@ -47,9 +47,9 @@ const Counter = (props) => {
 
     return (
         <div>
-            <Display valueToDisplay={counterValue} />
+            <Display counterValueToDisplay={counterValue} />
             <ButtonsPannel buttonMethod={buttonHandleChange}
-                stateValueToDisplay={stepValue} />
+                stepValueToDisplay={stepValue} />
             <Step stepMethod={stepValueChange} />
         </div>
     )

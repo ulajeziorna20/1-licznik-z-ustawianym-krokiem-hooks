@@ -1,20 +1,17 @@
 import React from "react";
-import './Display.css'
+import './css/Display.css'
 
 
 
 function Display(props) {
 
 
-
-
     return (
         <div className="counter-display">
-            Counter: {props.valueToDisplay}
+            Counter: {props.counterValueToDisplay}
         </div>
     )
 }
-
 
 
 export default Display;
