@@ -5,9 +5,6 @@ import './ButtonsPanel.css'
 
 function ButtonsPannel(props) {
 
-
-
-
     return (
         <div>
             <button className="add-x button" onClick={() => props.buttonMethod('add-x')}>Zwiększ o: <span>{props.stateValueToDisplay}</span></button>
@@ -16,9 +13,6 @@ function ButtonsPannel(props) {
         </div>
     )
 }
-
-
-
 
 
 export default ButtonsPannel;
